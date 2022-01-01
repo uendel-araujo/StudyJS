@@ -21,6 +21,25 @@ form.addEventListener('submit', function(event){
     const bmi = getBmi(weight, height);
 });
 
+function getBmiParameter(bmi){
+    const parameter = ['Underweight', 'Normal Weight', 'Overweight', 'Grade 1 Obesity',
+                       'Grade 2 Obesity', 'Grade 3 Obesity' ];
+
+    if(bmi >= 39.9) {
+        return parameter[5];
+    } else if(bmi >= 34.9) {
+        return parameter[4];
+    } else if(bmi >= 29.9) {
+        return parameter[3];
+    } else if(bmi >= 24.9) {
+        return parameter[2];
+    } else if(bmi >= 18.5) {
+        return parameter[1];
+    } else if (bmi < 18.5) {
+        return parameter[0];
+    }
+}
+
 function getBmi(weight , height){
     const bmi = weight / height ** 2;
     return bmi.toFixed(2);
