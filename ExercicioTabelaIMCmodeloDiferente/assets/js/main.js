@@ -27,6 +27,9 @@ function createP () {
 function setResult(message, isValid) {
     const result = document.querySelector('#result');
     result.innerHTML = '';
+    
     const p = createP();
+    p.innerHTML = message;
+    result.appendChild(p);
     
 }
