@@ -17,7 +17,14 @@ form.addEventListener('submit', function(event){
         setResult('Invalid Height', false);
         return;
     }
+
+    const bmi = getBmi(weight, height);
 });
+
+function getBmi(weight , height){
+    const bmi = weight / height ** 2;
+    return bmi.toFixed(2);
+}
 
 function createP () {
     const p = document.createElement('p');
