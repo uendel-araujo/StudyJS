@@ -1,7 +1,7 @@
 const elementos = [
     { tag: 'p', texto: 'Uendel Ives de Araujo' },
     { tag: 'div', texto: 'Larissia de Carvalho Medeiros' },
-    { tag: 'footer', texto: 'Lara de carvalho Araujo' },
+    { tag: 'footer', texto: 'Lara de Carvalho Araujo' },
     { tag: 'section', texto: 'Minha família' },
 ];
 
