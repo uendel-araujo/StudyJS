@@ -19,6 +19,11 @@ form.addEventListener('submit', function(event){
     }
 
     const bmi = getBmi(weight, height);
+    const bmiParameter = getBmiParameter(bmi);
+
+    const message = `Your BMI is ${bmi} (${bmiParameter}).`;
+
+    setResult(message, true);
 });
 
 function getBmiParameter(bmi){
@@ -55,7 +60,13 @@ function setResult(message, isValid) {
     result.innerHTML = '';
     
     const p = createP();
+
+    if(isValid) {
+        p.classList.add('result-paragraph');
+    } else {
+        p.classList.add('bad');
+    }
+
     p.innerHTML = message;
-    result.appendChild(p);
-    
+    result.appendChild(p);  
 }
